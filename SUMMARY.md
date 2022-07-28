@@ -21,5 +21,5 @@
   * [Testing](advanced/testing.md)
   * [SCXML](advanced/scxml.md)
   * [xstate.js](advanced/xstate.js.md)
+* [Beat for Flutter](beat-for-flutter.md)
 * [Examples](examples.md)
-* [Page 4](page-4.md)
