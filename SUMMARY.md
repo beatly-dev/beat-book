@@ -1,12 +1,25 @@
 # Table of contents
 
-* [Page 1](README.md)
-* [Page 2](page-2.md)
-
-## Group 1
-
-* [Page 3](group-1/page-3.md)
-
-***
-
+* [Introduction](README.md)
+* [Tutorial](tutorial/README.md)
+  * [Installation](tutorial/installation.md)
+  * [Define state chart](tutorial/define-state-chart/README.md)
+    * [BeatStation - A state holder](tutorial/define-state-chart/beatstation-a-state-holder.md)
+    * [Beat - Transitions](tutorial/define-state-chart/beat-transitions.md)
+  * [Context - Extra data](tutorial/context-extra-data/README.md)
+    * [Define context](tutorial/context-extra-data/define-context.md)
+    * [Update context](tutorial/context-extra-data/update-context.md)
+    * [Update context with event's argument](tutorial/context-extra-data/update-context-with-events-argument.md)
+  * [Side effects](tutorial/side-effects/README.md)
+    * [Simple callback action](tutorial/side-effects/simple-callback-action.md)
+    * [assign - change context](tutorial/side-effects/assign-change-context.md)
+  * [Define services](tutorial/define-services.md)
+* [Advanced](advanced/README.md)
+  * [Nested state](advanced/nested-state.md)
+  * [Parallel state](advanced/parallel-state.md)
+  * [Actors](advanced/actors.md)
+  * [Testing](advanced/testing.md)
+  * [SCXML](advanced/scxml.md)
+  * [xstate.js](advanced/xstate.js.md)
+* [Examples](examples.md)
 * [Page 4](page-4.md)
