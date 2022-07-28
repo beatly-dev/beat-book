@@ -8,6 +8,18 @@ Like `xstate.js` provides type-sensitive state management with its typescript im
 
 You can find a detailed introduction to a state chart in the [`xstate.js's introduction section.`](https://xstate.js.org/docs/guides/introduction-to-state-machines-and-statecharts/#states)
 
+### The power of code generation
+
+`beat` is built on top of `build_runner`'s code generation systems. With **beat**, you can write a code as small as possible. **beat** will generate all the code needed to manage the state. **beat** will even generate helper classes and widgets for whom to use this package for their `dart` and `flutter` applications.&#x20;
+
+## Alternatives
+
+`beat` is dependent on Dart's code generation system `build_runner`. If you are looking for other state chart packages which do not depend on `build_runner`, there are several packages.
+
+* xstate \[[pub.dev](https://pub.dev/packages/xstate)], \[[github](https://github.com/sahandevs/xstate.dart)] - As you can see its name, it's almost the same as xstate.js
+* statecharts \[[pub.dev](https://pub.dev/packages/statecharts)], \[[github](https://github.com/sarahec/statecharts)] - declarative, immutable, and compatible with [SCXML](https://www.w3.org/TR/scxml/).
+* automata \[[pub.dev](https://pub.dev/packages/automata)], \[[github](https://github.com/rows/automata)] - developed by rows.com
+
 ## Disclaimer
 
 Although I said `beat` as state management with **a state chart**, `beat` would not strictly follow the state chart XML (SCXML) specifications. And also, `beat` would not strictly follow the `xstate.js`.
