@@ -11,3 +11,12 @@ dev_dependencies:
 ```
 
 Now you can use `beat`.&#x20;
+
+Highly recommend executing the below command while you are coding.
+
+```
+flutter pub run build_runner watch
+# or 
+dart run build_runner watch
+```
+
