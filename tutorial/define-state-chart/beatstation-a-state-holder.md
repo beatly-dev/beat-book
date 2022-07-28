@@ -23,7 +23,12 @@ enum MyState {
 
 When you run `dart run build_runner build` or `flutter pub run build_runner build`, above code will generate a `MyStateBeatStation` class and the other stuff to handle state management.&#x20;
 
-You can use `MyStateBeatStation` as a start point.&#x20;
+The main classes you will use are `{YourEnumClassName}BeatStation` and `{YourEnumClassName}BeatState`.&#x20;
+
+* {Some}BeatStation is holding the state which is {Some}BeatState
+* {Some}BeatState represents the state&#x20;
+
+You can use `MyStateBeatStation` as a start point and `MyStateBeatState` to define an initial state.
 
 ```dart
 /// filename: main.dart
