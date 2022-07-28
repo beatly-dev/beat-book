@@ -6,6 +6,7 @@
   * [Define state chart](tutorial/define-state-chart/README.md)
     * [BeatStation - A state holder](tutorial/define-state-chart/beatstation-a-state-holder.md)
     * [Beat - Transitions](tutorial/define-state-chart/beat-transitions.md)
+    * [Send event](tutorial/define-state-chart/send-event.md)
   * [Context - Extra data](tutorial/context-extra-data/README.md)
     * [Define context](tutorial/context-extra-data/define-context.md)
     * [Update context](tutorial/context-extra-data/update-context.md)

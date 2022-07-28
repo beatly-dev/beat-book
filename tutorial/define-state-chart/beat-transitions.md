@@ -12,17 +12,17 @@ part 'mystate.beat.dart';
 
 @BeatStation()
 enum MyState {
-    @Beat(event: 'goToSecond', to: MyState.second)
+    @Beat(event: 'goToNext', to: MyState.second)
     first, 
-    @Beat(event: 'goToThird', to: MyState.third)
+    @Beat(event: 'goToNext', to: MyState.third)
     second,
-    @Beat(event: 'goToLast', to: MyState.last)
+    @Beat(event: 'goToNext', to: MyState.last)
     third,
     last,
 }
 ```
 
-That's it! Run `build_runner` again, and then it will generate everything you need. Now, let's use transitions. All transition events you defined will be prefixed with `$` signs. See the below.&#x20;
+That's it! Run `build_runner` again, and then it will generate everything you need. Now, let's use transitions. All transition events you defined will be prefixed with `$` signs. For example, if the `event` field is `'do'` then you can trigger this event with `station.someState.$do()` method. See the below.&#x20;
 
 ```dart
 /// filename: main.dart
@@ -34,28 +34,28 @@ main() {
     
     print(myState.currentState.state); // will print `MyState.first`
     
-    // `beat` automatically generate these fields and methods. 
+    // `beat` automatically generates these fields and methods. 
     // all transition event methods are prefixed with `$` signs. 
-    myState.first.$goToSecond();
+    myState.first.$goToNext();
     print(myState.currentState.state); // will print `MyState.second`
     
     // This does nothing because it's not in `MyState.first` state.
-    // `beat` automatically prevent unrelated transitions being executed
-    myState.first.$goToSecond(); 
+    // `beat` automatically prevents unrelated transitions from being executed
+    myState.first.$goToNext(); 
     print(myState.currentState.state); // will print `MyState.second`
     
-    myState.second.$goToThird();
+    myState.second.$goToNext();
     print(myState.currentState.state); // will print `MyState.third`
     
-    myState.third.$gotToLast();
+    myState.third.$gotToNext();
     print(myState.currentState.state); // will print `MyState.last`
     
     // Because `MyState.last` is our last state 
     // which does not have any transitions (`beat` annotation),
     // all the transitions followed will do nothing. 
-    myState.second.$goToThird();
-    myState.third.$goToLast();
-    myState.first.$goToSecond();
+    myState.second.$goToNext();
+    myState.third.$goToNext();
+    myState.first.$goToNext();
     print(myState.currentState.state); // will print `MyState.last`
 }
 ```
