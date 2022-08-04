@@ -1,6 +1,6 @@
-# Send event
+# Send - Event sender
 
-Although `myState.second.$goNext();`-styled event trigger is somewhat verbose, it's a bit bothering to type same event name.
+Although `myState.second$.$goNext();`-styled event trigger is somewhat verbose, it's a bit bothering to type same event name.
 
 To solve this bother, **beat** provides a sender-styled event trigger. Let's see an example.
 
@@ -43,7 +43,7 @@ void main(List<String> arguments) {
 
 ```
 
-The verbose-styled trigger should type the exact state to call transition like `station.doing.$finish()`. But the sender-styled trigger is simpler. You don't need to type the state. The `send` field has all the events you defined.&#x20;
+The verbose-styled trigger should type the exact state to call transition like `station.doing$.$finish()`. But the sender-styled trigger is simpler. You don't need to type the state. The `send` field has all the events you defined.&#x20;
 
 This approach is easier to handle events when your events are similar to the previous example - [Beat transition tutorial](beat-transitions.md). If you have same events name for many states, you can just type `station.send.$sameEventName()`
 

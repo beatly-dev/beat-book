@@ -24,16 +24,16 @@ Now you can instantiate the beat station with an initial context.&#x20;
 
 ```dart
 // main function in main.dart 
-final myState = MyStateBeatStation(MyStateBeatState(
-    state: MyState.first,
-    context: MyContextType('beatly.dev'),
-));
+final myState = MyStateBeatStation(
+    initialState: MyState.first,
+    initialContext: MyContextType('beatly.dev'),
+);
 
 // Accessing the context
 final currentContext = myState.currentState.context;
     
 ```
 
-If you want to update the context, you should use [`AssignAction`](update-context.md).&#x20;
+If you want to update the context, you should use [`AssignAction`](update-context-on-events.md).&#x20;
 
 <mark style="color:red;">**YOU MUST NEVER DO**</mark> `currentState.context = something;`

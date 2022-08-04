@@ -34,9 +34,9 @@ You can use `MyStateBeatStation` as a start point and `MyStateBeatState` to defi
 /// filename: main.dart
 import 'mystate.dart';
 main() {
-    final myState = MyStateBeatStation(MyStateBeatState(
-        state: MyState.first
-    ));
+    final myState = MyStateBeatStation(
+        initialState: MyState.first
+    );
     final currentState = myState.currentState;
     final realState = currentState.state;
     print(realState); // this will print `MyState.first`
