@@ -34,6 +34,6 @@ final currentContext = myState.currentState.context;
     
 ```
 
-If you want to update the context, you should use [`AssignAction`](update-context-on-events.md).&#x20;
+If you want to update the context, you should use [`AssignAction`](update-context-on-transitions.md).&#x20;
 
 <mark style="color:red;">**YOU MUST NEVER DO**</mark> `currentState.context = something;`

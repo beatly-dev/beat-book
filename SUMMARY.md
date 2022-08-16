@@ -8,7 +8,7 @@
     * [Send - Event sender](introduction/define-state-chart/send-event-sender.md)
   * [Context - Extra data](introduction/context-extra-data/README.md)
     * [Define context](introduction/context-extra-data/define-context.md)
-    * [Update context on events](introduction/context-extra-data/update-context-on-events.md)
+    * [Update context on transitions](introduction/context-extra-data/update-context-on-transitions.md)
     * [Update context with event's argument](introduction/context-extra-data/update-context-with-events-argument.md)
   * [Actions - Side effects](introduction/actions-side-effects/README.md)
     * [Callback - simplest action](introduction/actions-side-effects/callback-simplest-action.md)
