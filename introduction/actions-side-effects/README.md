@@ -1,4 +1,4 @@
-# Side effects
+# Actions - Side effects
 
 ### Define side effects (actions)
 
@@ -28,7 +28,7 @@ enum MyState {
     third,
     last,
 }
-printTransition(MyState state, _, EventData event) {
+printTransition(BeatState state, EventData event) {
     final eventName = event.event;
     print('Transition from $state with event ${eventName}');
 }

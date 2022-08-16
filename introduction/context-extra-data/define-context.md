@@ -25,7 +25,7 @@ Now you can instantiate the beat station with an initial context.&#x20;
 ```dart
 // main function in main.dart 
 final myState = MyStateBeatStation(
-    initialState: MyState.first,
+    firstState: MyState.first,
     initialContext: MyContextType('beatly.dev'),
 );
 

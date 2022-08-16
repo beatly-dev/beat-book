@@ -23,7 +23,7 @@ enum Assignment {
 
 void main(List<String> arguments) {
   final station =
-      AssignmentBeatStation(AssignmentBeatState(state: Assignment.doing));
+      AssignmentBeatStation(firstState: Assignment.doing);
 
   station.addListener(() {
     print("State changed to ${station.currentState}");
@@ -47,7 +47,7 @@ The verbose-styled trigger should type the exact state to call transition like `
 
 This approach is easier to handle events when your events are similar to the previous example - [Beat transition tutorial](beat-transitions.md). If you have same events name for many states, you can just type `station.send.$sameEventName()`
 
-Let's fix the [Beat transition tutorial](beat-transitions.md).
+Let's revise the [Beat transition tutorial](beat-transitions.md).
 
 ```dart
 /// filename: main.dart
