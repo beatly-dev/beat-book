@@ -18,7 +18,7 @@ String assignUserName(BeatState state, EventData<String> event) {
 }
 
 void main() {
-    final station = UserBeatStation();
+    final station = UserBeatStation()..start();
     station.send.$login('Provided name');
 }
 ```

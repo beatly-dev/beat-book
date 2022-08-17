@@ -36,9 +36,15 @@ import 'mystate.dart';
 main() {
     final myState = MyStateBeatStation(
         firstState: MyState.first
-    );
+    )..start();
     final currentState = myState.currentState;
     final realState = currentState.state;
     print(realState); // this will print `MyState.first`
 }
 ```
+
+> <mark style="color:red;">**You must call**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**`start()`**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**method before using the station.**</mark>&#x20;
+
+If you don't provide the `firstState` then the first field in your enum will be the initial state.&#x20;
+
+<mark style="color:red;">****</mark>

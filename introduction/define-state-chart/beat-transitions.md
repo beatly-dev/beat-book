@@ -30,7 +30,7 @@ import 'mystate.dart';
 main() {
     final myState = MyStateBeatStation(
         firstState: MyState.first
-    );
+    )..start();
     
     print(myState.currentState.state); // will print `MyState.first`
     
