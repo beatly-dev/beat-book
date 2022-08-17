@@ -13,6 +13,7 @@
   * [Synchronous effects - Actions](introduction/synchronous-effects-actions/README.md)
     * [Callback - simplest action](introduction/synchronous-effects-actions/callback-simplest-action.md)
     * [Assign - change context](introduction/synchronous-effects-actions/assign-change-context.md)
+    * [Choose - conditional actions](introduction/synchronous-effects-actions/choose-conditional-actions.md)
     * [Define an action as a class](introduction/synchronous-effects-actions/define-an-action-as-a-class.md)
   * [Asynchronous effects - Invoke services](introduction/asynchronous-effects-invoke-services.md)
     * [onDone/onError](introduction/asynchronous-effects-invoke-services/ondone-onerror.md)
