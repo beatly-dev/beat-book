@@ -19,6 +19,7 @@
   * [Eventless Transitions](introduction/eventless-transitions.md)
 * [Advanced](advanced/README.md)
   * [Delay transitions](advanced/delay-transitions.md)
+  * [Conditional Transitions](advanced/conditional-transitions.md)
   * [Nested state](advanced/nested-state.md)
   * [Parallel state](advanced/parallel-state.md)
   * [Actors](advanced/actors.md)
