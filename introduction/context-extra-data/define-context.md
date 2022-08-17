@@ -27,7 +27,7 @@ Now you can instantiate the beat station with an initial context.&#x20;
 final myState = MyStateBeatStation(
     firstState: MyState.first,
     initialContext: MyContextType('beatly.dev'),
-)..start();
+);
 
 // Accessing the context
 final currentContext = myState.currentState.context;

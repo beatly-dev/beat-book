@@ -18,6 +18,7 @@
     * [onDone/onError](introduction/asynchronous-effects-invoke-services/ondone-onerror.md)
   * [Eventless Transitions](introduction/eventless-transitions.md)
 * [Advanced](advanced/README.md)
+  * [Delay transitions](advanced/delay-transitions.md)
   * [Nested state](advanced/nested-state.md)
   * [Parallel state](advanced/parallel-state.md)
   * [Actors](advanced/actors.md)

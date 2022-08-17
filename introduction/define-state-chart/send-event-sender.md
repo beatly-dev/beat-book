@@ -23,7 +23,7 @@ enum Assignment {
 
 void main(List<String> arguments) {
   final station =
-      AssignmentBeatStation(firstState: Assignment.doing)..start();
+      AssignmentBeatStation(firstState: Assignment.doing);
 
   station.addListener(() {
     print("State changed to ${station.currentState}");
