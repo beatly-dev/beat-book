@@ -18,6 +18,7 @@
   * [Asynchronous effects - Invoke services](introduction/asynchronous-effects-invoke-services.md)
     * [onDone/onError](introduction/asynchronous-effects-invoke-services/ondone-onerror.md)
   * [Eventless Transitions](introduction/eventless-transitions.md)
+  * [Listen to changes](introduction/listen-to-changes.md)
 * [Advanced](advanced/README.md)
   * [Delay transitions](advanced/delay-transitions.md)
   * [Conditional Transitions](advanced/conditional-transitions.md)
