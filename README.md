@@ -20,6 +20,8 @@ You can find a detailed introduction to a state chart in the [`xstate.js's intro
 * statecharts \[[pub.dev](https://pub.dev/packages/statecharts)], \[[github](https://github.com/sarahec/statecharts)] - declarative, immutable, and compatible with [SCXML](https://www.w3.org/TR/scxml/).
 * automata \[[pub.dev](https://pub.dev/packages/automata)], \[[github](https://github.com/rows/automata)] - developed by rows.com
 
+And you can find others via searching `state machine` or `state chart`.
+
 ## Disclaimer
 
 Although I said `beat` as state management with **a state chart**, `beat` would not strictly follow the state chart XML (SCXML) specifications. And also, `beat` would not strictly follow the `xstate.js`.
