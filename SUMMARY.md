@@ -34,4 +34,5 @@
   * [Access to nested substations](for-flutter/access-to-nested-substations.md)
 * [Cookbook](cookbook.md)
 * [Examples](examples.md)
-* [Github](https://github.com/beatly-dev/beat)
+* [Github - beat](https://github.com/beatly-dev/beat)
+* [Github - this book](https://github.com/beatly-dev/beat-book)
