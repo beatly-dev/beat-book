@@ -1,10 +1,12 @@
 # Installation
 
-Add `beat`, `beat_generator` and `build_runner` to your `pubspec.yaml`.
+Add `beat`, `beat_generator` and `build_runner` to your `pubspec.yaml`. <mark style="color:blue;">If you are using</mark> <mark style="color:blue;"></mark><mark style="color:blue;">`flutter`</mark> <mark style="color:blue;"></mark><mark style="color:blue;">then add</mark> <mark style="color:blue;"></mark><mark style="color:blue;">`flutter_beat`</mark> <mark style="color:blue;"></mark><mark style="color:blue;">instead of</mark> <mark style="color:blue;"></mark><mark style="color:blue;">`beat`</mark><mark style="color:blue;">.</mark>
 
 ```yaml
 dependencies: 
-    beat:
+    # install only one of two according to your application
+    beat: # for dart only applications
+    flutter_beat: # for flutter applications
 dev_dependencies:
     build_runner:
     beat_generator: 

@@ -1,3 +1,3 @@
 # Nested state
 
-Document will be written soon.
+The document will be written soon. But I recommend you separate substate into an independent state.&#x20;
