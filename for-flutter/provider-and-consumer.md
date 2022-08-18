@@ -183,4 +183,4 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 {% endcode %}
 
-As you can see, using `ref` from the `CounterConsumer`'s builder, you can access any of the properties in the `CounterStation`.&#x20;
+As you can see, using `ref` from the `CounterConsumer`'s builder, you can access to any of properties in the `CounterStation`.&#x20;

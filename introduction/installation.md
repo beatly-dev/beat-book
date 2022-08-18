@@ -24,10 +24,6 @@ dart run build_runner watch
 
 If you don't execute the above command, then you have to run `flutter pub run build_runner build` or `dart run build_runner build` every time you edit your code.&#x20;
 
-#### .gitignore
-
-`beat` generate `*.beat.dart` files. These files might change in every update of `beat`, so it's highly recommended that add `**/*.beat.dart` to your `.gitignore` file. Don't worry, other developers can generate them again.&#x20;
-
 #### Lint options
 
 You may want to add these lines to your `analysis_options.yaml` file to prevent linter's blaming.&#x20;
