@@ -66,3 +66,11 @@ Now you don't need to care about whether the current state is `first`, `second`,
 ### When to use verbose? sender?
 
 It's up to you! If you want to specify the event then you can use the verbose-styled trigger. If you don't want to care about the state then you can use the sender-styled trigger.&#x20;
+
+### An alternative way to call sender
+
+Instead of using `send.$event()` you can use `send` as a function.
+
+```dart
+myState.send('goToNext'); // => Same with myState.send.$goToNext();
+```
