@@ -37,16 +37,30 @@ If the state is changed before the delayed transitions are triggered, all the de
 The simplest example is login-timeout scenario.
 
 ```dart
-@BeatStation()
+@BeatStation(contextType: LoginInfo)
 enum User {
-    @Invokes([/* Autologin service */])
+    @Invokes([/* Autologin service if */])
+    // onDone: {to: loggedIn}, onError: {to: loggedOut}
+    initial, 
+    
+    @Beat(event: 'login', to: connecting)
     loggedOut,
     
+    @Invokes([/* Some login process */]) 
+    // onDone: {to: loggedIn}, onError: {to: loggedOut}
+    connecting, 
+    
     // logout after three minutes
-    @Eventless(to: loggedOut, after: Duration(minutes: 3))
+    @EventlessBeat(
+        to: loggedOut,
+        after: Duration(minutes: 3),
+        actions: [/* some logout related actions */],
+    )
     // self-routing state to cancel the previous eventless transition
     // after this transition, eventless logout transition is queued again.
     @Beat(event: 'keep login', to: loggedIn)
     loggedIn,
 }
 ```
+
+If you don't trigger `keep login` event, `send.$keepLogin()`, in every three minutes then eventless transition will change state to logout.&#x20;

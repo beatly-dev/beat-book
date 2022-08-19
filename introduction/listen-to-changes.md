@@ -14,7 +14,10 @@ enum Sample {
     two,
     three,
 }
+sampleStation.addListener(() {}); // for every changes of enum state
+sampleStation.addContextListener((){}); // for changes of context
 
+/// Callback is called if station reaches the specific state. 
 sampleStation.addListenerOnOne(() {});
 sampleStation.addListenerOnTwo(() {});
 sampleStation.addListenerOnThree(() {});

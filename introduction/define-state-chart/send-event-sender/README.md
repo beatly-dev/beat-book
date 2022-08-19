@@ -45,9 +45,9 @@ void main(List<String> arguments) {
 
 The verbose-styled trigger should type the exact state to call transition like `station.doing$.$finish()`. But the sender-styled trigger is simpler. You don't need to type the state. The `send` field has all the events you defined.&#x20;
 
-This approach is easier to handle events when your events are similar to the previous example - [Beat transition tutorial](beat-transitions.md). If you have same events name for many states, you can just type `station.send.$sameEventName()`
+This approach is easier to handle events when your events are similar to the previous example - [Beat transition tutorial](../beat-transitions.md). If you have same events name for many states, you can just type `station.send.$sameEventName()`
 
-Let's revise the [Beat transition tutorial](beat-transitions.md).
+Let's revise the [Beat transition tutorial](../beat-transitions.md).
 
 ```dart
 /// filename: main.dart
@@ -72,5 +72,5 @@ It's up to you! If you want to specify the event then you can use the verbose-st
 Instead of using `send.$event()` you can use `send` as a function.
 
 ```dart
-myState.send('goToNext'); // => Same with myState.send.$goToNext();
+station.send('goToNext'); // => Same with myState.send.$goToNext();
 ```
