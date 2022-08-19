@@ -35,6 +35,7 @@
 * [For Flutter](for-flutter/README.md)
   * [Provider and Consumer](for-flutter/provider-and-consumer.md)
   * [Selectable re-rendering](for-flutter/selectable-re-rendering.md)
+  * [Customize Consumer widget](for-flutter/customize-consumer-widget.md)
   * [Access to nested substations](for-flutter/access-to-nested-substations.md)
 * [Cookbook](cookbook.md)
 * [Why another state manager?](why-another-state-manager.md)

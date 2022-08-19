@@ -12,9 +12,7 @@ Using `ref`, you can access `station`, `currentState`, `enumState` and `context`
 
 Furthermore, if you assign your custom class context type, you can access its properties right away. In the [previous example](provider-and-consumer.md), I access the `count` field in the `CounterContext` class directly with `ref.$$count`. To prevent variable name duplication `flutter_beat` suffixes your class' fields with `$$`.&#x20;
 
-{% hint style="danger" %}
-If your contextType class is in the other dart file, then `beat` can not infer types right now. This will be fixed soon.&#x20;
-{% endhint %}
+> If your contextType class is in the other dart file, then `beat` can not infer types right now. This will be fixed soon.&#x20;
 
 ```dart
 CounterConsumer(
