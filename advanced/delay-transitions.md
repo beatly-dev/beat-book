@@ -7,6 +7,7 @@ You can just pass `after` argument on the trigger.&#x20;
 ```dart
 // This will be triggered after 1 second.
 myStation.send.$gotoNext(after: Duration(milliseconds: 1000));
+myStation.send('gotoNext', after: Duration(milliseconds: 1000));
 ```
 
 As same with [delayed eventless transitions](../introduction/eventless-transitions.md), if the station reaches the other state, then the delayed transitions are all canceled.
