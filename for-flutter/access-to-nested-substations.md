@@ -1,3 +1,3 @@
 # Access to nested substations
 
-This is not yet supported.&#x20;
+You can use [nested-state.md](../advanced/nested-state.md "mention") method. But the provider/consumer pattern is not yet supported. I am working on this right now.&#x20;
