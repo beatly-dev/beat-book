@@ -33,7 +33,7 @@ When `DogBeatStation` enters `Dog.onWalking`, `TailBeatStation` starts.&#x20;
 
 ### Multiple substations in one state - not yet supported
 
-One state can only have one child station. Multiple children are not supported yet. This will be naturally supported if I finish implementing [`Parallel State`](../parallel-state.md) which is not yet supported.&#x20;
+One state can only have one child station. Multiple children are not supported yet. This will be naturally supported if I finish implementing [`Parallel State`](parallel-state.md) which is not yet supported.&#x20;
 
 ### Code reusability - not yet supported
 
