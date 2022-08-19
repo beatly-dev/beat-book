@@ -37,6 +37,7 @@
   * [Selectable re-rendering](for-flutter/selectable-re-rendering.md)
   * [Access to nested substations](for-flutter/access-to-nested-substations.md)
 * [Cookbook](cookbook.md)
+* [Why another state manager?](why-another-state-manager.md)
 * [Examples](examples.md)
 * [Github - beat](https://github.com/beatly-dev/beat)
 * [Github - this book](https://github.com/beatly-dev/beat-book)
