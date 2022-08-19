@@ -22,8 +22,8 @@ Choose what you want.&#x20;
 This method can be useful when you are writing actions, services, or conditions.&#x20;
 
 ```dart
-bool transitionGuard(BeatState state, _) {
-    final BeatState rootState = state.of(Root);
-    return rootState.currentState.isTraveling$;
+bool transitionGuardForRoot(BeatState state, _) {
+    final BeatState rootState = state.of(GrandChild);
+    return rootState.currentState.isIdle$;
 }
 ```
