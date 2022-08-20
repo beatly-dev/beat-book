@@ -122,20 +122,28 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             CounterConsumer(
               builder: (context, ref, _) {
+                print('Select count');
+                final count = ref.select(
+                  (station) => station.currentState.context?.count ?? 0,
+                );
                 return Text(
-                  '${ref.$$count ?? 0}',
+                  '$count',
                   style: Theme.of(context).textTheme.headline4,
                 );
               },
             ),
             CounterConsumer(
               builder: (contxt, ref, _) {
-                return Text('Current Counter State: ${ref.currentState.state}');
+                final state = ref.station.currentState.state;
+                return Text(
+                  'Current Counter State: $state',
+                );
               },
             ),
             CounterConsumer(
               builder: (contxt, ref, _) {
-                if (ref.isAdded$) {
+                final added = ref.station.currentState.isAdded$;
+                if (added) {
                   return const Text('Last transition: add');
                 }
                 return const SizedBox.shrink();
@@ -143,7 +151,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             CounterConsumer(
               builder: (contxt, ref, _) {
-                if (ref.isTaken$) {
+                final taken = ref.station.currentState.isTaken$;
+                if (taken) {
                   return const Text('Last transition: take');
                 }
                 return const SizedBox.shrink();
@@ -159,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               FloatingActionButton(
                 onPressed: () {
-                  ref.send.$takeOne();
+                  ref.station.send.$takeOne();
                 },
                 tooltip: 'Decrement',
                 child: const Icon(Icons.remove),
@@ -167,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(width: 16),
               FloatingActionButton(
                 onPressed: () {
-                  ref.send.$addOne();
+                  ref.station.send.$addOne();
                 },
                 tooltip: 'Increment',
                 child: const Icon(Icons.add),
@@ -179,6 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
 ```
 {% endcode %}
 
