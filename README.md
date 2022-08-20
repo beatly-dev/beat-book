@@ -1,5 +1,11 @@
 # Introduction
 
+{% hint style="danger" %}
+`beat` is actively changing. None of the APIs is guaranteed to be stable. You need to check this book if you want to update `beat`, `flutter_beat`, and `beat_generator` versions. This book will always be up to date.&#x20;
+
+When the `beat` reaches v1.0, API will be stabilized.&#x20;
+{% endhint %}
+
 ## Beat - State management with a state chart
 
 This project is my toy project to simplify the state management flows in `Flutter`. Whole functionalities are heavily inspired by [`xstate.js`](https://xstate.js.org/docs/). I highly recommend reading the docs of [`xstate.js`](https://xstate.js.org/docs/).&#x20;
