@@ -1,6 +1,6 @@
 # Send event
 
-Refer to[ the previous example](./), you can use `DogBeatStation` to send the events to the nested stations.&#x20;
+Refer to[ the previous example](../nested-state.md), you can use `DogBeatStation` to send the events to the nested stations.&#x20;
 
 ```dart
 final myStation = DogBeatStation()..start();
