@@ -62,3 +62,8 @@ CounterConsumer(
 )
 ```
 
+{% hint style="warning" %}
+The first and the second options (`station`, `select`, `stationWhen`) should not be called asynchronously.&#x20;
+
+Like inside an `onPressed` of `Button`, consider using `ref.readStation`.
+{% endhint %}
