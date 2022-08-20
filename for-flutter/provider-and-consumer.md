@@ -11,8 +11,7 @@ import 'package:flutter_beat/flutter_beat.dart';
 
 part 'counter.beat.dart';
 
-@WithFlutter()
-@BeatStation(contextType: CounterContext)
+@BeatStation(contextType: CounterContext, withFlutter: true)
 @addOneBeat
 @takeOneBeat
 enum Counter {
