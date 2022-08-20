@@ -25,23 +25,16 @@ CounterConsumer(
 
 If you use `ref.select` method, `beat` will rebuild your widget only when the computed value has a different result. Through this, you can manage your widget tree finer-grained way.&#x20;
 
-If you just want to retrieve `BeatStation` by testing it, you can use `ref.stationWhen()` method. This method returns `BeatStation` and rebuild your widgets only when the `test` callback returns true.
-
 ```dart
 CounterConsumer(
     // This will be called only once
     builder: (context, ref, _) {
         // rebuilt only when the refreshed count is changed. 
-        final state = ref.select(
+        final count = ref.select(
             (station) => station.currentState.context.count
         );
         
-        // rebuilt only when the counter is an even number
-        final station = ref.stationWhen(
-            (station) => station.currentState.context.count % 2 == 0
-        );
-        
-        return Text("Is counter an even number? ${state.state}");
+        return Text("Counter: $count");
     }
 )
 ```
@@ -63,7 +56,7 @@ CounterConsumer(
 ```
 
 {% hint style="warning" %}
-The first and the second options (`station`, `select`, `stationWhen`) should not be called asynchronously.&#x20;
+The first and the second options (`station`, `select`) should not be called asynchronously.&#x20;
 
 Like inside an `onPressed` of `Button`, consider using `ref.readStation`.
 {% endhint %}
