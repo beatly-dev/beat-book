@@ -36,7 +36,7 @@
   * [Provider 와 Consumer](for-flutter/provider-consumer.md)
   * [선택적 렌더링](for-flutter/undefined.md)
   * [Customize Consumer widget](for-flutter/customize-consumer-widget.md)
-  * [Access to nested substations](for-flutter/access-to-nested-substations.md)
+  * [Nested state 사용하기](for-flutter/nested-state.md)
 * [Cookbook](cookbook.md)
 * [Why another state manager?](why-another-state-manager.md)
 * [Examples](examples.md)
