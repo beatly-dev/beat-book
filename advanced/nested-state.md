@@ -1,5 +1,9 @@
 # Nested state
 
+{% hint style="warning" %}
+Support of nested state is highly unstable. Be cautious. In most cases, the nested state can be separated into an independent state.&#x20;
+{% endhint %}
+
 Defining a nested state is the same as defining a normal state. Define your new station first and then annotate a parent station with it.&#x20;
 
 ```dart
