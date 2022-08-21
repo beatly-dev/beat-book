@@ -22,7 +22,7 @@
   * [Eventless - 자동으로 실행되는 트리거](introduction/eventless-transitions.md)
   * [Listen to changes](introduction/listen-to-changes.md)
 * [Advanced](advanced/README.md)
-  * [Delay transitions](advanced/delay-transitions.md)
+  * [이벤트 트리거 지연시키기](advanced/undefined.md)
   * [Conditional Transitions](advanced/conditional-transitions.md)
   * [Nested state](advanced/nested-state.md)
     * [Send event](advanced/nested-state/send-event.md)
