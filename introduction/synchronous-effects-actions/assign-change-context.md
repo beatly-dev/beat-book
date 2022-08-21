@@ -1,6 +1,6 @@
 # Assign - 컨텍스트 변경
 
-자세한 내용은 앞선 챕터인 [undefined.md](../context/undefined.md "mention")를 참조 하세요&#x20;
+자세한 내용은 앞선 챕터인 [undefined.md](../../undefined/context/undefined.md "mention")를 참조 하세요&#x20;
 
 ## 클래스 형태로 Assign 액션 구현하기&#x20;
 
