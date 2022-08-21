@@ -1,6 +1,6 @@
 # onDone/onError
 
-When the invoked service has done its job, you can indicate what to do next. You can define the next state and actions to execute using `AfterInvoke` class similar to the `Beat` annotation. You can also define the next behavior when the invoked service throws.&#x20;
+&#x20;서비스의 실행이 끝난 뒤에 어떤 동작을 수행할지에 대해서도 지정할 수 있습니다. `onDone` 은 서비스가 에러 없이 종료된 경우, `onError` 는 서비스가 에러를 `throw` 한 경우에 수행되는 액션입니다. 아래의 예제를 통해 자세 알아보도록 하겠습니다.&#x20;
 
 ```dart
 @BeatStation(contextType: UserInfo)
@@ -33,4 +33,4 @@ UserInfo assignUserInfo(_, EventData event) {
 
 ```
 
-The actions executed after the invoked service finishes take the returned data from the service in `EventData.data`. When the service throws, `onError` can retrieve thrown error from `EventData.data`.
+&#x20;서비스가 종료될 때 `return` 을 통해 무언가를 반환하는 경우 그 데이터는 이후에 `onDone` 에 의해 실행되는 액션의 `EventData.data` 에 전달됩니다. 서비스가 `throw` 를 통해 에러를 생성하는 경우 해당 에러는 `onError` 에 의해 실행되는 액션의 `EventData.data` 에 전달됩니다.&#x20;
