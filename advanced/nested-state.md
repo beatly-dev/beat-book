@@ -1,5 +1,9 @@
 # Nested state
 
+{% hint style="warning" %}
+&#x20;Nested state 에 대한 지원은 아직 불완전합니다. 중첩 상태로 선언하는 대부분의 경우는 독립적인 상태로도 관리할 수 있으므로 최대한 중첩 상태를 줄이고 독립적인 상태로 관리하는 것을 추천합니다.&#x20;
+{% endhint %}
+
 Defining a nested state is the same as defining a normal state. Define your new station first and then annotate a parent station with it.&#x20;
 
 ```dart
