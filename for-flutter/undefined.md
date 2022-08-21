@@ -18,7 +18,7 @@ flutter\_beat 의 consumer 는 크게 3가지의 사용방법을 제공하고, �
 
 ```dart
 CounterConsumer(
-    builder: (context, ref, _) {
+    builder: (context, ref) {
         final state = ref.station.currentState;
         return Text("${state.state}");
     }
@@ -34,7 +34,7 @@ CounterConsumer(
 ```dart
 CounterConsumer(
     // This will be called only once
-    builder: (context, ref, _) {
+    builder: (context, ref) {
         // rebuilt only when the refreshed count is changed. 
         final count = ref.select(
             (station) => station.currentState.context.count
@@ -52,7 +52,7 @@ CounterConsumer(
 ```dart
 CounterConsumer(
     // This will be called only once
-    builder: (context, ref, _) {
+    builder: (context, ref) {
         final state = ref.readStation.currentState;
         // Same result, same effect
         // final state = ref.read((station) => station.currentSate); 

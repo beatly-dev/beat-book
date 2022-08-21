@@ -37,13 +37,13 @@ RootProvider(
 
 return Column(
     children: [
-        RootConsumer(builder: (context, ref, _) {
+        RootConsumer(builder: (context, ref) {
             return SomeWidget();
         }),
-        ChildConsumer(builder: (context, ref, _) {
+        ChildConsumer(builder: (context, ref) {
             return SomeChildWidget();
         }),
-        GrandChildConsumer(builder: (context, ref, _) {
+        GrandChildConsumer(builder: (context, ref) {
             return SomeGrandChildWidget();
         }),
     ],
@@ -56,7 +56,7 @@ return Column(
 
 ```dart
 /// BeatState.of()를 사용한 예
-RootConsumer(builder: (context, ref, _) {
+RootConsumer(builder: (context, ref) {
     final child = ref.select(
         (station) => station.currentState.of(Child)
     );
@@ -65,24 +65,24 @@ RootConsumer(builder: (context, ref, _) {
 
 ## Child state 가 아직 시작하지 않은 경우
 
-&#x20;위의 예제에서 각 중첩 상태들은 `someState` 에 도달해야만 실행이 됩니다. 그 이전에는 비활성화된 상태로 남아있습니다. Consumer 들은 의존하고 있는 station 이 비활성화 상태인 경우 builder 를 호출하지 않고, child 에 있는 위젯을 바로 사용합니다. 위와 같이 child에 아무 위젯도 전달하지 않은 경우에는 `SizedBox.shrink()` 를 사용합니다. 아래의 예제를 통해 앞의 예제를 발전시켜 보도록 하겠습니다.&#x20;
+&#x20;위의 예제에서 각 중첩 상태들은 `someState` 에 도달해야만 실행이 됩니다. 그 이전에는 비활성화된 상태로 남아있습니다. Consumer 들은 의존하고 있는 station 이 비활성화 상태인 경우 builder 를 호출하지 않고, `placeHolder` 에 있는 위젯을 바로 사용합니다. 위와 같이 child에 아무 위젯도 전달하지 않은 경우에는 `SizedBox.shrink()` 를 사용합니다. 아래의 예제를 통해 앞의 예제를 발전시켜 보도록 하겠습니다.&#x20;
 
 ```dart
 [
-    RootConsumer(builder: (context, ref, _) {
+    RootConsumer(builder: (context, ref) {
         return SomeWidget();
     }),
     ChildConsumer(
-        builder: (context, ref, _) {
+        builder: (context, ref) {
         return SomeChildWidget();
         }, 
-        child: Text('아직 Root.someState에 도달하지 못했습니다.'),
+        placeHolder: Text('아직 Root.someState에 도달하지 못했습니다.'),
     ),
     GrandChildConsumer(
-        builder: (context, ref, _) {
+        builder: (context, ref) {
             return SomeGrandChildWidget();
         },
-        child: Text('아직 Child.someState에 도달하지 못했습니다.'),
+        placeHolder: Text('아직 Child.someState에 도달하지 못했습니다.'),
     ),
 ],
 ```
