@@ -23,7 +23,7 @@
   * [Listen to changes](introduction/listen-to-changes.md)
 * [Advanced](advanced/README.md)
   * [이벤트 트리거 지연시키기](advanced/undefined.md)
-  * [Conditional Transitions](advanced/conditional-transitions.md)
+  * [선택전 이벤트 트리거](advanced/undefined-1.md)
   * [Nested state](advanced/nested-state.md)
     * [Send event](advanced/nested-state/send-event.md)
     * [Access nested states](advanced/nested-state/access-nested-states.md)
