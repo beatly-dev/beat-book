@@ -1,11 +1,11 @@
 # Listen to changes
 
-You can listen to changes in the station.&#x20;
+&#x20;아래의 메소드들을 통해 다양한 변화에 반응하는 콜백들을 등록할 수 있습니다.&#x20;
 
 * `addListener`/ `removeListener`: listen to `currentState.state` changes
 * `addContextListener` / `removeContextListener`: listen to `currentState.context` changes
 
-In addition, there are more fine-grained listeners.&#x20;
+&#x20;뿐만 아니라 `beat` 는 좀더 작은 단위의 변화에 대한 콜백 리스너도 지원합니다.&#x20;
 
 ```dart
 @BeatStation
@@ -23,11 +23,9 @@ sampleStation.addListenerOnTwo(() {});
 sampleStation.addListenerOnThree(() {});
 ```
 
-Like the above example, other listeners are auto-generated.&#x20;
-
 ## Listen to changes by stream
 
-`beat` provides three streams to use.&#x20;
+&#x20;다트의 기본적인 reactive 데이터인 `stream` 또한 지원하고 있습니다.&#x20;
 
 * `stateStream`: notified when `currentState.state` and `currentState.context` changes
 * `enumStream`: notified when `currentState.state` changes
@@ -46,4 +44,4 @@ sampleStation.enumStream.addListener(() {});
 sampleStation.contextStream.addListener() {});
 ```
 
-If you are using `flutter`, `stream` is much more easier to utilize.&#x20;
+&#x20;플러터를 메인 프레임으로 사용하는 개발자라면  이 stream을 통해서 `StreamBuilder` 로 쉽게 위젯을 생성할 수 있습니다.&#x20;

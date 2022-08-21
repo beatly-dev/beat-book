@@ -1,6 +1,6 @@
 # Eventless - 자동으로 실행되는 트리거
 
-&#x20;[asynchronous-effects-services](asynchronous-effects-services/ "mention") 에서는 자동으로 실행되는 async 서비스를 지정할 수 있었듯이, 서비스 실행없이 자동으로 트리거 되는 이벤트 또한 지정할 수 있습니다.&#x20;
+&#x20;[asynchronous-effects-services](../undefined/asynchronous-effects-services/ "mention") 에서는 자동으로 실행되는 async 서비스를 지정할 수 있었듯이, 서비스 실행없이 자동으로 트리거 되는 이벤트 또한 지정할 수 있습니다.&#x20;
 
 ```dart
 @BeatStation()

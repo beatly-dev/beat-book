@@ -19,7 +19,7 @@
     * [Class 형태로 일반 액션 선언하기](introduction/synchronous-effects-actions/define-an-action-as-a-class.md)
   * [Asynchronous effects - Services](undefined/asynchronous-effects-services/README.md)
     * [onDone/onError](undefined/asynchronous-effects-services/ondone-onerror.md)
-  * [Eventless - 자동으로 실행되는 트리거](undefined/eventless.md)
+  * [Eventless - 자동으로 실행되는 트리거](introduction/eventless-transitions.md)
   * [Listen to changes](introduction/listen-to-changes.md)
 * [Advanced](advanced/README.md)
   * [Delay transitions](advanced/delay-transitions.md)
