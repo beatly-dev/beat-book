@@ -42,3 +42,4 @@
 * [Examples](examples.md)
 * [Github - beat](https://github.com/beatly-dev/beat)
 * [Github - this book](https://github.com/beatly-dev/beat-book)
+* [Pub.dev - beat](https://pub.dev/packages/beat)
