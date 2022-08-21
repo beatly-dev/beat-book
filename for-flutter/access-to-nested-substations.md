@@ -37,13 +37,13 @@ RootProvider(
 
 return Column(
     children: [
-        RootConsumer(builder: (context, ref, _) {
+        RootConsumer(builder: (context, ref) {
             return SomeWidget();
         }),
-        ChildConsumer(builder: (context, ref, _) {
+        ChildConsumer(builder: (context, ref) {
             return SomeChildWidget();
         }),
-        GrandChildConsumer(builder: (context, ref, _) {
+        GrandChildConsumer(builder: (context, ref) {
             return SomeGrandChildWidget();
         }),
     ],
@@ -54,7 +54,7 @@ As you can see, I just wrapped the root with `RootProvider` and I can use any le
 
 ```dart
 /// Using BeatState.of()
-RootConsumer(builder: (context, ref, _) {
+RootConsumer(builder: (context, ref) {
     final child = ref.select(
         (station) => station.currentState.of(Child)
     );
@@ -63,24 +63,24 @@ RootConsumer(builder: (context, ref, _) {
 
 ## When the child state is not yet started
 
-Child state is not started until its parent state reaches a specific state which is associated with the child state. In this case, Consumer will not call  its `builder`, and use `child`. If you don't provide a child widget like the above example, then `SizedBox.shrink()` is used. Let's modify the example.&#x20;
+Child state is not started until its parent state reaches a specific state which is associated with the child state. In this case, Consumer will not call  its `builder`, and use `placeHolder`. If you don't provide a child widget like the above example, then `SizedBox.shrink()` is used. Let's modify the example.&#x20;
 
 ```dart
 [
-    RootConsumer(builder: (context, ref, _) {
+    RootConsumer(builder: (context, ref) {
         return SomeWidget();
     }),
     ChildConsumer(
-        builder: (context, ref, _) {
-        return SomeChildWidget();
+        builder: (context, ref) {
+            return SomeChildWidget();
         }, 
-        child: Text('Root.someState is not yet reached'),
+        placeHolder: Text('Root.someState is not yet reached'),
     ),
     GrandChildConsumer(
-        builder: (context, ref, _) {
+        builder: (context, ref) {
             return SomeGrandChildWidget();
         },
-        child: Text('Child.someState is not yet reached'),
+        placeHolder: Text('Child.someState is not yet reached'),
     ),
 ],
 ```

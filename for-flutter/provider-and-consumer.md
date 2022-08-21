@@ -121,54 +121,40 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             CounterConsumer(
-              builder: (context, ref, _) {
-                print('Select count');
-                final count = ref.select(
-                  (station) => station.currentState.context?.count ?? 0,
+              builder: (context, ref) {
+                final counter = ref.select(
+                  (station) => (station.currentState.context?.count),
                 );
                 return Text(
-                  '$count',
+                  '$counter',
                   style: Theme.of(context).textTheme.headline4,
                 );
               },
             ),
             CounterConsumer(
-              builder: (contxt, ref, _) {
-                final state = ref.station.currentState.state;
-                return Text(
-                  'Current Counter State: $state',
+              builder: (context, ref) {
+                final count = ref.select(
+                  (station) {
+                    final count = station.currentState.context?.count ?? 0;
+                    return (count ~/ 2) * 2;
+                  },
                 );
-              },
-            ),
-            CounterConsumer(
-              builder: (contxt, ref, _) {
-                final added = ref.station.currentState.isAdded$;
-                if (added) {
-                  return const Text('Last transition: add');
-                }
-                return const SizedBox.shrink();
-              },
-            ),
-            CounterConsumer(
-              builder: (contxt, ref, _) {
-                final taken = ref.station.currentState.isTaken$;
-                if (taken) {
-                  return const Text('Last transition: take');
-                }
-                return const SizedBox.shrink();
+                return Text(
+                  'Even number counter: $count',
+                );
               },
             ),
           ],
         ),
       ),
       floatingActionButton: CounterConsumer(
-        builder: (context, ref, _) {
+        builder: (context, ref) {
           return Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               FloatingActionButton(
                 onPressed: () {
-                  ref.station.send.$takeOne();
+                  ref.readStation.send.$takeOne();
                 },
                 tooltip: 'Decrement',
                 child: const Icon(Icons.remove),
@@ -176,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(width: 16),
               FloatingActionButton(
                 onPressed: () {
-                  ref.station.send.$addOne();
+                  ref.readStation.send.$addOne();
                 },
                 tooltip: 'Increment',
                 child: const Icon(Icons.add),
