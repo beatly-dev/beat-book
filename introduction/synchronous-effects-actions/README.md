@@ -1,5 +1,24 @@
 # Synchronous effects - Actions
 
-### Actions - Defining side effects
+## Actions - 이벤트 트리거의 side effects
 
-Side effects are `fire-and-forgot` actions when a transition is triggered. Each transition can have multiple `actions` to execute. `beat` execute all actions in order.&#x20;
+여기서 Side effects는 일단 실행은 하되 그 효과에 대해서는 상관하지 않는 것들을 의미합니다.&#x20;
+
+예제를 통해 알아보도록 합시다.&#x20;
+
+action 은 각 `Beat` 어노테이션에 여러개의 `Action` 을 선언하여 실행됩니다.&#x20;
+
+```dart
+@BeatStation()
+enum User {
+    @Beat(event: 'hi', to: something, actions: [액션1, 액션2, 액션3])
+    idle,
+    something,
+}
+```
+
+&#x20;정의된 액션들은 액션을 포함하는 이벤트가 발생할 때 코드에 정의된 순서 그대로 실행됩니다. 여기서는 `send.$hi()` 이벤트를 실행시키면 액션1, 액션2, 액션3 순서로 액션들이 실행된 이후에, `something` 스테이트로 변경이 되게 됩니다.&#x20;
+
+가장 처음 언급했던 '효과에 대해서 상관하지 않는다' 라는 것은, 액션들은 순서대로 동작하긴 하지만, 뒷 순서의 액션들이 앞 순서의 액션 결과에 의존하지 않아야 하는 것을 말합니다. 액션1이 실행되고 액션2가 실행되기 이전에 모종의 이유로 액션1의 결과가 그대로 유지 되지 않을 수 있기 때문입니다.&#x20;
+
+실제로 어떤 액션들을 사용할 수 있는지 다음장부터 하나씩 살펴보도록 하겠습니다.&#x20;
