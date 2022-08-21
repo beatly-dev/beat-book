@@ -1,6 +1,6 @@
 # Eventless Transitions
 
-Like [asynchronous-effects-invoke-services.md](asynchronous-effects-invoke-services.md "mention"), there's a way to define the automatic transition when the station reaches a specific state. Like `Beat` annotation, you can use `EventlessBeat` annotation for this purpose.&#x20;
+Like [asynchronous-effects-services](../undefined/asynchronous-effects-services/ "mention"), there's a way to define the automatic transition when the station reaches a specific state. Like `Beat` annotation, you can use `EventlessBeat` annotation for this purpose.&#x20;
 
 ```dart
 @BeatStation()

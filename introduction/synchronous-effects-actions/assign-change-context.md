@@ -1,6 +1,6 @@
 # Assign - change context
 
-Refer to [update-context-on-transitions.md](../context-extra-data/update-context-on-transitions.md "mention").
+Refer to [undefined.md](../../undefined/context/undefined.md "mention").
 
 ## Assign context with class
 
