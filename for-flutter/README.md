@@ -1,8 +1,8 @@
 # For Flutter
 
-Flutter is the first citizen I aim to support. `flutter_beat` package is for this reason. <mark style="color:blue;">If you are using flutter rather than Dart-only, then you</mark> <mark style="color:blue;"></mark><mark style="color:blue;">**should**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">add</mark> <mark style="color:blue;"></mark><mark style="color:blue;">`flutter_beat`</mark> <mark style="color:blue;"></mark><mark style="color:blue;">instead of</mark> <mark style="color:blue;"></mark><mark style="color:blue;">`beat`</mark><mark style="color:blue;">.</mark>
+&#x20;개인 프로젝트의 대부분이 flutter 이기 때문에, 플러터를 최우선 타겟으로 생각하면서 `beat` 를 개발/사용하고 있습니다. 플러터와 함께 `beat` 를 사용하는 경우에는 `beat` 패키지가 아니라 `flutter_beat` 패키지를 설치해야 합니다.&#x20;
 
-`flutter_beat` mainly provides two classes. The first is `consumer` and the second is `provider`. Usage is as same as `beat`. But you have to mark your enum classes with `withFlutter: true` property of `BeatStation` annotation. Then, `beat_generator` generates provider and consumer widgets for you.
+&#x20;`flutter_beat` 패키지는 플러터 프레임워크 내에서 Provider / Consumer 패턴을 지원합니다. `flutter_beat` 패키지를 설치하고 `BeatStation` 어노테이션의 `withFlutter` 속성을 `true` 로 설정하면, 자동으로 필요한 Provider 와 Consumer 를 생성합니다.&#x20;
 
 ```dart
 @BeatStation(contextType: int, withFlutter: true)
@@ -12,6 +12,4 @@ enum Counter {
 }
 ```
 
-This will generate `CounterProvider` and `CounterConsumer` widgets. If you want to customize the behavior of the consumer, you can extend `CounterConsumerWidget` or `StatefulConsumerWidget`.
-
-Let's see the details in the next chapter.&#x20;
+&#x20;위의 예제에서는 `CounterProvider` 와 `CounterConsumer` 가 생성됩니다. CounterProvider 는 이름 그대로 counter staion 을 위젯 트리에 주입시키는 역할을 하고, CounterConsumer 는 주입된 counter station 을 이용하는 역할을 합니다. 이 밖에도 Consumer 를 자유롭게 만들어 사용할 수 있도록 상속가능한 `CounterConsumerWidget` 을 제공하고, StatefulWidget 과 같은 형태로 상속할 수 있도록 `StatefulCounterConsumerWidget` 과 `CounterConsumerState` 를 제공합니다.&#x20;

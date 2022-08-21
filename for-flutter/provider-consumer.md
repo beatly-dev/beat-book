@@ -1,10 +1,6 @@
-# Provider and Consumer
+# Provider 와 Consumer
 
-`flutter_beat` generates `{YourEnum}Provider` and `{YourEnum}Consumer`. It follows the Provider/Consumer pattern in flutter.&#x20;
-
-The usage is almost the same as using [riverpod](https://riverpod.dev/). You can easily understand when you read riverpod's documentation.&#x20;
-
-Let's start with an example.
+`flutter_beat` 는 `{YourEnum}Provider` 와 `{YourEnum}Consumer`를 생성하고 이를 사용할 수 있도록 합니다. 사용법은 provider 패키지나 riverpod 패키지와 유사합니다. bloc, provider, riverpod 중 하나라도 사용해 봤다면 쉽게 이해하실 수 있습니다.
 
 ```dart
 import 'package:flutter_beat/flutter_beat.dart';
@@ -66,7 +62,7 @@ CounterContext takeOne(BeatState state, _) {
 
 ```
 
-After running `flutter pub run build_runner build` or `watch`, you can use consumer and provider.&#x20;
+&#x20;위의 에제는 일부러 복잡하게 만든 Counter 상태 코드입니다. 아래의 코드는 이를 사용하는 단순한 Counter +/- 애플리케이션 입니다. 해당 코드는 깃허브 레포지토리의 examples/counter 폴더에서 확인할 수 있습니다.&#x20;
 
 {% code lineNumbers="true" %}
 ```dart
@@ -188,8 +184,23 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
 ```
 {% endcode %}
 
-As you can see, using `ref` from the `CounterConsumer`'s builder, you can access any of the properties in the `CounterStation`.&#x20;
+&#x20;예제 코드에서 보이듯이, Provider 를 사용할 때 초기 상태와 초기 컨텍스트 값을 제공할 수 있습니다. 추가로 station 의 시작 이전과, 종료 이전에 실행할 수 있는 `beforeStart` 와 `beforeDispose` 콜백함수도 지정할 수 있습니다.&#x20;
+
+&#x20;Provider 의 하위 위젯트리에 존재하는 Consumer 에서는 builder 에 전달되는 ref 를 사용하여 station 에 접근할 수 있습니다. 위의 코드에서 한 부분만 살펴보면서 알아보도록 하겠습니다.&#x20;
+
+```dart
+CounterConsumer(
+  builder: (contxt, ref, _) {
+    final taken = ref.station.currentState.isTaken$;
+    if (taken) {
+      return const Text('Last transition: take');
+    }
+    return const SizedBox.shrink();
+  },
+),
+```
+
+`ref.station` 을 통해 `CounterBeatStation` 을 접근하고 해당 station 의 내용을 읽어옵니다.
