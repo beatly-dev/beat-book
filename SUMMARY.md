@@ -23,7 +23,7 @@
   * [Listen to changes](introduction/listen-to-changes.md)
 * [Advanced](advanced/README.md)
   * [이벤트 트리거 지연시키기](advanced/undefined.md)
-  * [선택전 이벤트 트리거](advanced/undefined-1.md)
+  * [선택전 이벤트 트리거](advanced/conditional-transitions.md)
   * [Nested state](advanced/nested-state.md)
     * [Send event](advanced/nested-state/send-event.md)
     * [Access nested states](advanced/nested-state/access-nested-states.md)
@@ -42,3 +42,4 @@
 * [Examples](examples.md)
 * [Github - beat](https://github.com/beatly-dev/beat)
 * [Github - this book](https://github.com/beatly-dev/beat-book)
+* [Pub.dev - beat](https://pub.dev/packages/beat)
