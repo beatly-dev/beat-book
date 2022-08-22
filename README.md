@@ -1,6 +1,12 @@
 # Introduction
 
 {% hint style="danger" %}
+WARNING
+
+I am currently rewriting everything to follow the [https://statecharts.dev/](https://statecharts.dev/) . ALL of the APIs will be changed.&#x20;
+{% endhint %}
+
+{% hint style="warning" %}
 `beat` is actively changing. None of the APIs is guaranteed to be stable. You need to check this book if you want to update `beat`, `flutter_beat`, and `beat_generator` versions. This book will always be up to date.&#x20;
 
 When the `beat` reaches v1.0, API will be stabilized.&#x20;
